@@ -5,17 +5,28 @@ public class Runner {
     
     public Runner(){
         VirtualPet v = new VirtualPet();
-        v.exercise();
-        takeABeat(1);
-        v.feed();
-        String ans = getAnswer("How are you?");
+        // v.exercise();
+        // takeABeat(5000);
+        // v.feed();
+        // String ans = getAnswer("How are you?");
+
+        // greetings
+                //excited to try your food
+        //   i cant say long words so I dont like food that is a logn word
+        // try food
+        // once hes eaten 3 good things - Bloated
+        // once hes eaten 3 bad things - diahrea
+
+
+
         }
     
         public String getAnswer(String a){
+        // string s = the input of the user
             String s = (String)JOptionPane.showInputDialog(
          new JFrame(),
-         a,
-         "Question?",
+         a, // the question
+         "Question?", //title of frame
          JOptionPane.PLAIN_MESSAGE
        );
        return s;
