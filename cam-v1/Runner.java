@@ -5,6 +5,13 @@ public class Runner {
     
     public Runner(){
         VirtualPet v = new VirtualPet();
+        takeABeat(3000);
+        String likeEating = getAnswer("Before we get started, do you like to eat?");
+        boolean likeFood = (likeEating.contains("y")||likeEating.contains("Y"));
+        v.likesFood(likeFood);
+        takeABeat(2000);
+        
+
         // v.exercise();
         // takeABeat(5000);
         // v.feed();
