@@ -12,9 +12,22 @@ public class VirtualPet {
     public VirtualPet() {
         face = new VirtualPetFace();
         face.setImage("normal");
-        face.setMessage("Hello.");
+        face.setMessage("Hi friend, my name is Charmy. Today I have to feed everyone in the Black Bulls and you're gonna help me pick what I feed everyone!");
     }
     
+    public void likesFood(Boolean x) {
+        if (x){
+            face.setMessage("Laaa, I like food too");
+        }
+        else{
+            face.setImage("mad");
+            face.setMessage("LAAA, HOW DARE YOU!");
+        }
+    }
+
+
+
+
     public void feed() {
         if (hunger > 10) {
             hunger = hunger - 10;
