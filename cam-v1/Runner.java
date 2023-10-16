@@ -10,6 +10,10 @@ public class Runner {
         boolean likeFood = (likeEating.contains("y")||likeEating.contains("Y"));
         v.likesFood(likeFood);
         takeABeat(2000);
+        v.asta();
+        takeABeat(4000);
+        String astaFood = getAnswer("What food should I make for Asta?");
+        v.feedAsta(astaFood);
         
 
         // v.exercise();
@@ -37,8 +41,8 @@ public class Runner {
          JOptionPane.PLAIN_MESSAGE
        );
        return s;
-
         } 
+
         public void takeABeat (int milliseconds){
             try {
             Thread.sleep(milliseconds); //milliseconds
