@@ -5,16 +5,20 @@ public class Runner {
     
     public Runner(){
         VirtualPet v = new VirtualPet();
-        takeABeat(3000);
+        takeABeat(5000);
         String likeEating = getAnswer("Before we get started, do you like to eat?");
         boolean likeFood = (likeEating.contains("y")||likeEating.contains("Y"));
         v.likesFood(likeFood);
-        takeABeat(2000);
+        takeABeat(4000);
         v.asta();
         takeABeat(4000);
         String astaFood = getAnswer("What food should I make for Asta?");
         v.feedAsta(astaFood);
-        
+        takeABeat(4000);
+        v.yami();
+        takeABeat(4000);
+        String yamiFood = getAnswer("What food should I give to Captain?");
+        v.feedYami(yamiFood);
 
         // v.exercise();
         // takeABeat(5000);
