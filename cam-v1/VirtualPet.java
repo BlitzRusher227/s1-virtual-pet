@@ -16,7 +16,7 @@ public class VirtualPet {
     public VirtualPet() {
         face = new VirtualPetFace();
         face.setImage("intro");
-        face.setMessage("Hi friend, my name is Charmy. Today I have to feed everyone in the Black Bulls and you're gonna help me pick what I feed everyone!");
+        face.setMessage("Hi friend, my name is Charmy. Today I have to feed everyone in the Black Bulls Magic Squad, and you're gonna help me pick what I feed everyone!");
     }
     
     public void likesFood(Boolean x) {
@@ -32,11 +32,11 @@ public class VirtualPet {
 
     public void asta(){
         face.setImage("asta");
-        face.setMessage("This is Asta laa, he's a little dumb so he only likes food that he can say. (Which is less than 5 words).");
+        face.setMessage("This is Asta laa, he's a little dumb so he only likes food that he can say. (Which is less than 8 letters).");
     }
     public void feedAsta(String food1){
 
-        if (feed(5, food1.length())){
+        if (feed(8, food1.length())){
             face.setImage("goodAsta");
             face.setMessage("I think he likes it laa, I'll try some too!");
             takeABeat(3000);
@@ -52,12 +52,30 @@ public class VirtualPet {
 
     }
 
-    public void feedYami(){
+    public void yami(){
+        face.setImage("yami");
+        face.setMessage("This is Yami, he's our captain and he loves his Golden Time so he only likes food that starts with G!");
+    }
+
+    public void feedYami(String food2){
+        if (food2.substring(0,1).equals("G") || food2.substring(0,1).equals("g")){
+            face.setImage("eatYami");
+            face.setMessage("Laaa Captain likes it! MY TURN! I bet it's yummy.");
+            takeABeat(3000);
+            face.setImage("digin");
+        }
+        else {
+            face.setImage("poopYami");
+            face.setMessage("Looks like his stomach didn't like that one. He's having his Golden Time now.");
+            takeABeat(3000);
+            face.setImage("digin");
+            face.setMessage("My stomach feels fine though!");
+        }        
 
     }
 
     public boolean feed(int letters, int length){
-        if (length <= letters){
+        if (length < letters){
             return true;
         }
         return false;
